@@ -1,0 +1,43 @@
+.header {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.main {
+    font-size: 2.4rem;
+}
+
+.main, .profile, .posts, .login {
+    cursor: pointer;
+}
+
+.text-container .profile:hover,
+.text-container .posts:hover,
+.text-container .login:hover {
+    text-decoration: underline;
+}
+
+.text-container .profile.active-link {
+    text-decoration: underline;
+}
+
+.text-container .login.active-link {
+    text-decoration: underline;
+}
+
+.header a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,32 @@
+.login-root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.login-page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-container {
+    border: solid #ffffff 3px;
+    width: 815px;
+    height: 491px;
+}
+
+.signup-wrapper {
+    width: 100%;
+    text-align: right;
+}
