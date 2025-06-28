@@ -23,10 +23,120 @@
 .login-container {
     border: solid #ffffff 3px;
     width: 815px;
-    height: 491px;
+    min-height: 491px;
 }
 
 .signup-wrapper {
     width: 100%;
     text-align: right;
+    font-size: 2rem;
+}
+
+.login-hi {
+    font-size: 2rem;
+}
+
+.login-signup {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-id {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 4rem;
+    margin-top: 80px;
+    margin-left: 184px;
+}
+
+.login-id-input, .login-pw-input {
+    width: 468px;
+    height: 64px;
+    background: transparent;
+    border: none;
+    border-bottom: solid #ffffff 3px;
+    outline: none;
+    box-shadow: none;
+    font-size: 4rem;
+    font-family: 'NeoDunggeunmo Pro', sans-serif;
+    color: #ffffff;
+    padding-right: 40px;
+}
+
+.login-pw-input {
+    padding-right: 80px;
+}
+
+.login-pw {
+    display: flex;
+    gap: 16px;
+    font-size: 4rem;
+    margin-top: 50px;
+    margin-left: 55px;
+}
+
+.login-button {
+    font-size: 2.8rem;
+    color: #ffffff;
+    margin-top: 144px;
+    margin-left: 660px;
+    padding: 12px 18px 12px 18px;
+    background-color: #0C00B6;
+    border: solid #ffffff 3px;
+    font-family: 'NeoDunggeunmo Pro', sans-serif;
+}
+
+.login-button:hover {
+    background-color: #ffffff;
+    color: #0C00B6;
+    cursor: pointer;
+}
+
+.signup-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.1s, border 0.1s;
+}
+
+.toggle-icon.active {
+    background-color: transparent;
+    border: solid #FFFFFF 3px;
+}
+
+.input-wrapper .error-message {
+    position: absolute;
+    top: calc(100% + 24px);
+    left: 0;
+    color: red;
+    font-size: 1.8rem;
+    z-index: 5;
+    pointer-events: none;
 }
