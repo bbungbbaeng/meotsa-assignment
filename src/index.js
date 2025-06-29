@@ -7,6 +7,7 @@ import Home from './views/Home/Home';
 import Profile from './views/Profile/Profile';
 import Login from './views/Login/Login';
 import SignUp from './views/SignUp/SignUp';
+import Account from './views/Account/Account';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
             { path: 'profile', element: <Profile />},
             { path: 'login', element: <Login />},
             { path: 'signup', element: <SignUp />},
+            { path: 'account', element: <Account />},
         ]
     }
 ]);

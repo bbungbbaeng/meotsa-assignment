@@ -1,0 +1,154 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    padding-bottom: 40px;
+}
+
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup-container {
+    border: solid #FFFFFF 3px;
+    width: 815px;
+    min-height: 809px;
+    font-size: 4rem;
+}
+
+.signup-hi {
+    font-size: 2rem;
+}
+
+.signup-id-input, .signup-pw-input, .signup-cpw-input, .signup-nick-input, .signup-univ-input, .signup-location-input {
+    border: none;
+    border-bottom: solid #FFFFFF 3px;
+    background-color: transparent;
+    width: 335px;
+    height: 64px;
+    outline: none;
+    box-shadow: none;
+    font-size: 4rem;
+    font-family: 'NeoDunggeunmo Pro', sans-serif;
+    color: #FFFFFF;
+    padding-right: 40px;
+}
+
+.signup-id, .signup-pw, .signup-cpw, .signup-nick, .signup-univ, .signup-location {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.signup-id {
+    margin-top: 80px;
+    margin-left: 333px;
+}
+
+.signup-pw {
+    margin-left: 205px;
+}
+
+.signup-cpw {
+    margin-left: 67px;
+}
+
+.signup-nick {
+    margin-left: 213px;
+}
+
+.signup-univ {
+    margin-left: 188px;
+}
+
+.signup-location {
+    margin-left: 220px;
+}
+
+.signup-button {
+    font-size: 2.8rem;
+    font-family: 'NeoDunggeunmo Pro', sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+    border: solid #FFFFFF 3px;
+    margin-top: 120px;
+    margin-left: 625px;
+    margin-bottom: 30px;
+    padding: 12px 18px 12px 18px;
+}
+
+.signup-button:hover {
+    background-color: #FFFFFF;
+    color: #0C00B6;
+    cursor: pointer;
+}
+
+.signup-login-wrapper {
+    text-align: right;
+    font-size: 2rem;
+}
+
+.signup-login-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.signup-login {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.1s, border 0.1s;
+}
+
+.toggle-icon.active {
+    background-color: transparent;
+    border: solid #FFFFFF 3px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .error-message {
+    position: absolute;
+    top: calc(100% + 24px);
+    left: 0;
+    color: red;
+    font-size: 1.8rem;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.input-wrapper .cpw-error-message {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    color: red;
+    font-size: 1.8rem;
+    z-index: 5;
+    pointer-events: none;
+}

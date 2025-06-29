@@ -12,9 +12,10 @@ const Login = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const handlelogin = async () => {
+    const handleLogin = async (e) => {
+        e.preventDefault();
         if (!id.trim() && !pw.trim()) {
-            setError('아이디나 패스워드를 모두 입력해주세요.');
+            setError('아이디 또는 패스워드를 모두 입력해주세요.');
             return;
         }
         if (!id.trim()) {
@@ -27,13 +28,22 @@ const Login = () => {
         }
 
         setError('');
+        
         const result = await login(id, pw);
         if (!result) {
             setError('존재하지 않는 계정입니다.');
             return;
         }
 
-        localStorage.setItem('token', result.token || result.accessToken || '');
+        const accessToken = result.access || result.token || '';
+        const refreshToken = result.refresh || '';
+        if (!accessToken) {
+            setError('로그인 토큰을 가져올 수 없습니다.');
+            return;
+        }
+        
+        localStorage.setItem('accessToken', accessToken);
+        localStorage.setItem('refreshToken', refreshToken);
         navigate('/');
     };
 
@@ -43,7 +53,7 @@ const Login = () => {
             <div className="login-page">
                 <div className="login-wrapper">
                     <p className="login-hi">어서오세요^^</p>
-                    <div className="login-container">
+                    <form className="login-container" onSubmit={handleLogin}>
                         <div className="login-id">
                             <span>ID :</span>
                             <div className="input-wrapper">
@@ -59,9 +69,9 @@ const Login = () => {
                                 {error && (<div className="error-message">{error}</div>)}
                             </div>
                         </div>
-                        <button className="login-button" onClick={handlelogin}>로그인</button>
-                    </div>
-                    <div className="signup-wrapper">
+                        <button className="login-button" type="submit">로그인</button>
+                    </form>
+                    <div className="login-signup-wrapper">
                         <span className="login-ifyou">계정이 없다면 ☞ </span>
                         <Link to="/signup"><span className="login-signup">회원가입</span></Link>
                     </div>

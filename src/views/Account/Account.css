@@ -1,0 +1,36 @@
+.account-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 530px;
+    min-height: 406px;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.account-head {
+    font-size: 4rem;
+}
+
+.account-head2 {
+    font-size: 2rem;
+}
+
+.account-inf-and-logout {
+    display: flex;
+    flex-direction: row;
+}
+
+.account-information {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 3.2rem;
+}
+
+.logout {
+    margin-top: auto;
+    margin-left: auto;
+    text-decoration: underline;
+    cursor: pointer;
+}
