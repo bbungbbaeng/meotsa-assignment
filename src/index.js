@@ -8,6 +8,10 @@ import Profile from './views/Profile/Profile';
 import Login from './views/Login/Login';
 import SignUp from './views/SignUp/SignUp';
 import Account from './views/Account/Account';
+import PostList from './views/Post/PostList/PostList';
+import WritePost from './views/Post/WritePost/WritePost';
+import ViewPost from './views/Post/ViewPost/ViewPost';
+import UpdatePost from './views/Post/UpdatePost/UpdatePost';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -20,6 +24,10 @@ const router = createBrowserRouter([
             { path: 'login', element: <Login />},
             { path: 'signup', element: <SignUp />},
             { path: 'account', element: <Account />},
+            { path: 'postlist', element: <PostList />},
+            { path: 'writepost', element: <WritePost />},
+            { path: 'viewpost/:id', element: <ViewPost /> },
+            { path: 'updatepost/:id', element: <UpdatePost />},
         ]
     }
 ]);

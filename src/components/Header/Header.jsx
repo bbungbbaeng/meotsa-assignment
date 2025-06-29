@@ -16,7 +16,7 @@ const Header = () => {
             <Link to="/"><span className="main">김유민의 블로그 ...^^</span></Link>
             <div className="text-container">
                 <NavLink to="/profile" className={({ isActive }) => `profile${isActive ? ' active-link' : ''}`}><span className="profile">프로필</span></NavLink>
-                <span className="posts">글 목록</span>
+                <NavLink to="/postlist" className={({ isActive }) => `postlist${isActive ? ' active-link' : ''}`}><span className="postlist">글 목록</span></NavLink>
                 <NavLink to={isLoggedIn ? '/account' : '/login'} className={({ isActive }) => `login${isActive ? ' active-link' : ''}`}><span className="login">{isLoggedIn ? '계정' : '로그인'}</span></NavLink>
             </div>
         </div>

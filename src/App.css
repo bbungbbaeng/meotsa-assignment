@@ -5,6 +5,15 @@
     font-style: normal;
 }
 
+@keyframes scanline {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 200px;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,6 +33,27 @@
     box-shadow:
         0 0 80px 0 rgba(255, 255, 255, 0.2),
         inset 0 0 120px -30px rgba(0, 0, 0, 0.6);
+}
+
+.route-container {
+    filter: drop-shadow(-1.5px -1.5px 0 rgba(255, 0, 0, 0.6)) drop-shadow(1.5px 1.5px 0 rgba(0, 255, 0, 0.6));
+}
+
+.App::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('./assets/pic/scanlines.png') repeat;
+    background-size: 230% 230%;
+    filter: brightness(1.2) saturate(1.1);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+
+    animation: scanline 20s linear infinite;
 }
 
 html {

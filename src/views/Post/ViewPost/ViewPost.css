@@ -1,0 +1,42 @@
+.viewpost-root {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+}
+
+.viewpost-page {
+    flex: 1;
+}
+
+.viewpost-title {
+    font-size: 4.4rem;
+    margin: 80px 100px 0 100px;
+}
+
+.viewpost-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    margin-top: 0;
+}
+
+.viewpost-author {
+    font-size: 2.4rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.update-button, .delete-button {
+    font-size: 2rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.viewpost-body {
+    font-size: 2.4rem;
+    margin: 40px 100px 60px 100px;
+}

@@ -19,17 +19,21 @@
     font-size: 2.4rem;
 }
 
-.main, .profile, .posts, .login {
+.main, .profile, .postlist, .login {
     cursor: pointer;
 }
 
 .text-container .profile:hover,
-.text-container .posts:hover,
+.text-container .postlist:hover,
 .text-container .login:hover {
     text-decoration: underline;
 }
 
 .text-container .profile.active-link {
+    text-decoration: underline;
+}
+
+.text-container .postlist.active-link {
     text-decoration: underline;
 }
 
