@@ -21,6 +21,7 @@
 }
 
 .App {
+    position: relative;
     min-height: 100vh;
     width: 100%;
     background:
@@ -36,7 +37,9 @@
 }
 
 .route-container {
-    filter: drop-shadow(-1.5px -1.5px 0 rgba(255, 0, 0, 0.6)) drop-shadow(1.5px 1.5px 0 rgba(0, 255, 0, 0.6));
+    filter: 
+        drop-shadow(-1.5px -1.5px 0 rgba(255, 0, 0, 0.6)) 
+        drop-shadow(1.5px 1.5px 0 rgba(0, 255, 0, 0.4));
 }
 
 .App::before {
@@ -47,13 +50,13 @@
     right: 0;
     bottom: 0;
     background: url('./assets/pic/scanlines.png') repeat;
-    background-size: 230% 230%;
+    background-size: 300% 300%;
     filter: brightness(1.2) saturate(1.1);
     opacity: 0.3;
     pointer-events: none;
     z-index: 1;
 
-    animation: scanline 20s linear infinite;
+    animation: scanline 15s linear infinite;
 }
 
 html {
